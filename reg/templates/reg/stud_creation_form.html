@@ -1,0 +1,47 @@
+{% extends "reg/base.html" %}
+{% load static %}
+{% block content %}
+
+<h3 class="ud">Edit groups</h3>
+<form method="POST">
+    {%csrf_token%}
+    <div class="form-row">
+        <div class="name">name</div>
+        <div class="input--style-6 value">
+            {{form.name}}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="name">Email</div>
+        <div class="input--style-6 value">
+            {{form.email}}
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="name">phone no</div>
+        <div class="input--style-6 value">
+            {{form.phno}}
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="name">clg_name</div>
+        <div class="input--style-6 value">
+            {{form.clg_name}}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="name">course_sem</div>
+        <div class="input--style-6 value">
+            {{form.corse_name}}
+        </div>
+    </div>
+    <br>
+    
+    <div>
+        <input class="button primary" type="submit" value="save">   
+</form>
+{{form.errors}}
+
+{% endblock content %}
